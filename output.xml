@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.8 on win32)" generated="20230905 14:37:33.785" rpa="false" schemaversion="4">
+<suite id="s1" name="Login" source="C:\Users\Arkamaya\Robot Framework\login.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${BaseUrl}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230905 14:37:34.364" level="INFO">Opening browser 'chrome' to base url 'https://sidomuncul.arkamaya.net/'.</msg>
+<status status="PASS" starttime="20230905 14:37:34.362" endtime="20230905 14:37:42.344"/>
+</kw>
+<test id="s1-t1" name="User Login With Valid Data" line="31">
+<kw name="Input Username">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${UsernameField}</arg>
+<arg>90000004</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230905 14:37:42.356" level="INFO">Typing text '90000004' into text field '//*[@id="form_login"]/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20230905 14:37:42.352" endtime="20230905 14:37:42.831"/>
+</kw>
+<status status="PASS" starttime="20230905 14:37:42.350" endtime="20230905 14:37:42.832"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PasswordField}</arg>
+<arg>satu2tiga</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230905 14:37:42.837" level="INFO">Typing text 'satu2tiga' into text field '//*[@id="user_password"]'.</msg>
+<status status="PASS" starttime="20230905 14:37:42.834" endtime="20230905 14:37:43.282"/>
+</kw>
+<status status="PASS" starttime="20230905 14:37:42.833" endtime="20230905 14:37:43.282"/>
+</kw>
+<kw name="Click Button Login">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230905 14:37:43.287" level="INFO">Clicking element '//*[@id="btn_submit"]'.</msg>
+<status status="PASS" starttime="20230905 14:37:43.285" endtime="20230905 14:37:46.400"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230905 14:37:47.412" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230905 14:37:46.401" endtime="20230905 14:37:47.412"/>
+</kw>
+<status status="PASS" starttime="20230905 14:37:43.283" endtime="20230905 14:37:47.412"/>
+</kw>
+<kw name="Verify on Login Page">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Dasbor Personalia</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230905 14:37:47.477" level="INFO">Current page contains text 'Dasbor Personalia'.</msg>
+<status status="PASS" starttime="20230905 14:37:47.414" endtime="20230905 14:37:47.477"/>
+</kw>
+<status status="PASS" starttime="20230905 14:37:47.413" endtime="20230905 14:37:47.478"/>
+</kw>
+<status status="PASS" starttime="20230905 14:37:42.344" endtime="20230905 14:37:47.479"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230905 14:37:47.481" endtime="20230905 14:37:50.246"/>
+</kw>
+<status status="PASS" starttime="20230905 14:37:33.791" endtime="20230905 14:37:50.247"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
