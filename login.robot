@@ -4,7 +4,7 @@ Suite Setup     Open Browser    ${BaseUrl}    ${BROWSER}
 Suite Teardown  Close Browser 
 
 *** Variables ***
-${BaseUrl}      https://sidomuncul.arkamaya.net/
+${BaseUrl}      {your_url}
 ${BROWSER}      chrome
 
 #Locator
@@ -15,10 +15,10 @@ ${LoginButton}          //*[@id="btn_submit"]
 *** Keywords ***
 
 Input Username
-    Input Text    ${UsernameField}     90000004
+    Input Text    ${UsernameField}     {your_username}
 
 Input Password 
-    Input Text    ${PasswordField}     satu2tiga
+    Input Text    ${PasswordField}     {your_password}
 
 Click Button Login 
     Click Element    ${LoginButton}
